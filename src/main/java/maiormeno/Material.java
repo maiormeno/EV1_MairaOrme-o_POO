@@ -19,7 +19,7 @@ public abstract class Material {
     }
 
     public void setTitulo(String titulo) throws IllegalArgumentException {
-
+    //Validacion titulo
        if(titulo != null && titulo.length() != 0) {
            this.titulo = titulo;
        } else {
@@ -31,7 +31,7 @@ public abstract class Material {
     public int getAnnoPublicacion() {
         return annoPublicacion;
     }
-
+    //Validacion año
     public void setAnnoPublicacion(int annoPublicacion) throws IllegalArgumentException {
 
         if(1450 <= annoPublicacion && annoPublicacion <= 2026){
@@ -45,7 +45,7 @@ public abstract class Material {
     public int getCopiasDisponibles() {
         return copiasDisponibles;
     }
-
+    //Validacion copias
     public void setCopiasDisponibles(int copiasDisponibles) {
         if (copiasDisponibles > 0) {
             this.copiasDisponibles = copiasDisponibles;

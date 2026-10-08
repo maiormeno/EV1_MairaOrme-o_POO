@@ -73,9 +73,9 @@ public class Libro extends Material implements Reservable {
             estado = "Bueno";
         }
 
-        String detalle = "Tipo: Libro" + "| Título: " + this.getTitulo() + "| Año: " + this.getAnnoPublicacion() +
-                "| Copias: " + this.getCopiasDisponibles() + "| Autor: " + this.getAutor() + "| Estado: " + estado +
-                "| Disponibilidad: " + this.getDisponibilidadReserva() + "| Costo préstamo: " + costoPrestamo();
+        String detalle = "Tipo: Libro" + " | Título: " + this.getTitulo() + " | Año: " + this.getAnnoPublicacion() +
+                " | Copias: " + this.getCopiasDisponibles() + " | Autor: " + this.getAutor() +
+                " | Estado: " + estado + " | Costo préstamo: " + costoPrestamo();
 
         return detalle;
     }
@@ -87,8 +87,6 @@ public class Libro extends Material implements Reservable {
     }
 
     @Override
-    public boolean registroReservado() {
-        return this.disponibilidadReserva;
-    }
+    public void registroReservado() {}
 
 }

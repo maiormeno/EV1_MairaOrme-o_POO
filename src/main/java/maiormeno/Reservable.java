@@ -4,8 +4,8 @@ import java.util.*;
 
 public interface Reservable {
 
-    public boolean estaReservado();
+    boolean estaReservado();
 
-    public boolean registroReservado();
+    void registroReservado();
 
 }

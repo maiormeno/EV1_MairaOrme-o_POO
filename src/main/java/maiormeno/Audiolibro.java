@@ -37,9 +37,9 @@ public class Audiolibro extends Material {
     @Override
     public String detallePrestamo() {
 
-        String detalle = "Tipo: Audiolibro" + "| Título: " + this.getTitulo() + "| Año: " + this.getAnnoPublicacion() +
-                "| Copias: " + this.copiasDisponibles + "| Duración: " + this.duracionMinutos +
-                "| Costo préstamo: " + costoPrestamo();
+        String detalle = "Tipo: Audiolibro" + " | Título: " + this.getTitulo() + " | Año: " + this.getAnnoPublicacion() +
+                " | Copias: " + this.copiasDisponibles + " | Duración: " + this.duracionMinutos +
+                " | Costo préstamo: " + costoPrestamo();
 
         return detalle;
     }
