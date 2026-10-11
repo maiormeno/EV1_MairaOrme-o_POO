@@ -8,11 +8,23 @@ public class Main {
     public static void main(String[] args) {
 
         //Instanciar
+        Material cien;
+        Material prin;
+        Material ciena;
+        Material sapie;
 
-        Material cien = new Libro("Cien años de soledad", 1967, 5, "Gabriel García Márquez", true, true);
-        Material prin = new Libro("El Principito", 1943, 3, "Antoine de Saint-Exupéry", false, true);
-        Material ciena = new Audiolibro("Cien años de soledad", 1967, 2, 620);
-        Material sapie = new Audiolibro("Sapiens", 2011, 4, 480);
+        //Try-catch
+        try{
+            cien = new Libro("Cien años de soledad", 1967, 5, "Gabriel García Márquez", true, true);
+            prin = new Libro("El Principito", 1943, 3, "Antoine de Saint-Exupéry", false, true);
+            ciena = new Audiolibro("Cien años de soledad", 1967, 2, 620);
+            sapie = new Audiolibro("Sapiens", 2011, 4, 480);
+
+        } catch(IllegalArgumentException e) {
+            System.out.println("Error al crear los materiales: " + e.getMessage());
+            System.out.println("No se pudo crear uno o más materiales. Terminando el programa.");
+            return;
+        }
 
 
         //Cien años de soledad como reservado
@@ -34,8 +46,8 @@ public class Main {
         System.out.println();
 
         //Invocar operaciones del gestor y resultados
-
         //Buscar por titulo "Cien años de soledad"
+
         System.out.println("=== BÚSQUEDA POR TÍTULO===");
 
         List<Material> resultadoBusqueda = biblioteca.buscarTitulo("Cien años de soledad");
@@ -47,6 +59,7 @@ public class Main {
         System.out.println();
 
         //Listado de Material (biblioteca)
+
         System.out.println("=== LISTADO DE MATERIALES===");
 
         for (Material lectura : biblioteca.todosLibros()) {
